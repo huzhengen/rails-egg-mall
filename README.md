@@ -1,24 +1,7 @@
-# README
+https://www.bilibili.com/video/BV1uJ411s7su?p=2&spm_id_from=pageDriver
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```
+bin/rails g sorcery:install
+bin/rails generate sorcery:install user_activation remember_me reset_password --only-submodules
+```
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
