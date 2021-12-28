@@ -15,3 +15,7 @@ kill -9 <PID>
 ```
 bin/rails g mailer user
 ```
+```
+bin/rails g model category
+bin/rails g model product
+```
