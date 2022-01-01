@@ -28,6 +28,7 @@ gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 gem 'jquery-rails'
 gem 'sorcery'
+gem 'will_paginate'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
