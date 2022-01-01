@@ -20,6 +20,34 @@ class Admin::CategoriesController < Admin::BaseController
     else
       render action: :new
     end
+  end
 
+  def edit
+    @category = Category.find(params[:id])
+    @root_categories = Category.roots.order(id: 'desc')
+    render action: :new
+  end
+
+  def update
+    @category = Category.find(params[:id])
+    @root_categories = Category.roots.order(id: 'desc')
+    @category.attributes = params.require(:category).permit!
+    if @category.save
+      flash[:notice] = '修改成功'
+      redirect_to admin_categories_path
+    else
+      render action: :new
+    end
+  end
+
+  def destroy
+    @category = Category.find(params[:id])
+    if @category.destroy
+      flash[:notice] = "删除成功"
+      redirect_to admin_categories_path
+    else
+      flash[:notice] = "删除失败"
+      redirect_to :back
+    end
   end
 end
