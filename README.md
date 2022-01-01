@@ -20,6 +20,13 @@ bin/rails g model category
 bin/rails g model product
 ```
 
+ancestry
 ```
 bin/rails g migration add_ancestry_to_category
+```
+
+rspec
+
+```
+bin/rails g rspec:install
 ```
