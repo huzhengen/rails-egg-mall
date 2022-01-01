@@ -19,3 +19,7 @@ bin/rails g mailer user
 bin/rails g model category
 bin/rails g model product
 ```
+
+```
+bin/rails g migration add_ancestry_to_category
+```

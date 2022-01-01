@@ -23,9 +23,10 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+gem 'ancestry'
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
+gem 'jquery-rails'
 gem 'sorcery'
 
 # Use Active Storage variant
