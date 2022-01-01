@@ -13,6 +13,12 @@ module RailsEggMall
 
     config.autoload_paths += %W[#{Rails.root}/lib]
 
+    config.generators do |generator|
+      generator.assets false
+      generator.test_framework false
+      generator.skip_routes true
+    end
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

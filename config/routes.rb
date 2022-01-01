@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    root 'sessions#new'
+    resources :sessions
+    resources :categories
+  end
   root 'welcome#index'
   resources :users
   resources :sessions

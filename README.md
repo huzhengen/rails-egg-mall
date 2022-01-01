@@ -30,3 +30,10 @@ rspec
 ```
 bin/rails g rspec:install
 ```
+
+admin
+```
+bin/rails g controller admin::sessions new
+bin/rails d controller admin::sessions new
+bin/rails g controller admin::categories index new
+```
