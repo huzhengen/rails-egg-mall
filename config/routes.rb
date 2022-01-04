@@ -3,7 +3,9 @@ Rails.application.routes.draw do
     root 'sessions#new'
     resources :sessions
     resources :categories
-    resources :products
+    resources :products do
+      resources :product_images, only: [:index, :create, :destroy]
+    end
   end
   root 'welcome#index'
   resources :users
