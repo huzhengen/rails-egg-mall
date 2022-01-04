@@ -37,3 +37,17 @@ bin/rails g controller admin::sessions new
 bin/rails d controller admin::sessions new
 bin/rails g controller admin::categories index new
 ```
+
+添加 gem
+```
+gem 'paperclip', '~> 5.0.0'
+```
+需要在 Mac 上安装 imagemagick
+```bash
+brew install imagemagick
+```
+
+创建图片 model
+```
+bin/rails g model product_image
+```
