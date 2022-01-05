@@ -51,3 +51,7 @@ brew install imagemagick
 ```
 bin/rails g model product_image
 ```
+
+```
+bin/rails g migration add_product_images_index
+```
