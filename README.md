@@ -55,3 +55,13 @@ bin/rails g model product_image
 ```
 bin/rails g migration add_product_images_index
 ```
+
+购物车 model
+```
+bin/rails g model shopping_cart
+```
+
+User 移植文件
+```
+bin/rails g migration add_user_uuid_column
+```
