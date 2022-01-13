@@ -1,0 +1,2 @@
+class Adddress < ApplicationRecord
+end

@@ -65,3 +65,13 @@ User 移植文件
 ```
 bin/rails g migration add_user_uuid_column
 ```
+
+收获地址
+```
+bin/rails g model adddress
+```
+
+默认地址的 id 添加到 user 表
+```
+bin/rails g migration add_user_default_address_id
+```
