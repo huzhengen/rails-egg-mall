@@ -10,14 +10,15 @@ class ShoppingCart < ApplicationRecord
 
   def self.create_or_update! options = {}
     cond = {
-      user_uuid: options.user_uuid,
-      product_id: options.product_id
+      user_uuid: options[:user_uuid],
+      product_id: options[:product_id]
     }
+
     record = where(cond).first
     if record
-      record.update_attributes!(options.merge(amount: cart.amount + options[:amount]))
+      record.update_attributes!(options.merge(amount: record.amount + options[:amount]))
     else
-      record.create!(options)
+      record = create!(options)
     end
 
     record
