@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2022_01_13_075316) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "adddresses", force: :cascade do |t|
+  create_table "addresses", force: :cascade do |t|
     t.integer "user_id"
     t.string "address_type"
     t.string "contact_name"
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2022_01_13_075316) do
     t.string "zipcode"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id", "address_type"], name: "index_adddresses_on_user_id_and_address_type"
+    t.index ["user_id", "address_type"], name: "index_addresses_on_user_id_and_address_type"
   end
 
   create_table "categories", force: :cascade do |t|

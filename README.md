@@ -68,7 +68,7 @@ bin/rails g migration add_user_uuid_column
 
 收获地址
 ```
-bin/rails g model adddress
+bin/rails g model address
 ```
 
 默认地址的 id 添加到 user 表

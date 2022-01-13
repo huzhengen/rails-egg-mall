@@ -14,5 +14,11 @@ Rails.application.routes.draw do
   resources :categories, only: [:show]
   resources :products, only: [:show]
   resources :shopping_carts
+  resources :addresses do
+    member do
+      put :set_default_address
+    end
+  end
+  resources :orders
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

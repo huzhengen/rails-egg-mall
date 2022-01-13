@@ -1,6 +1,6 @@
-class CreateAdddresses < ActiveRecord::Migration[6.1]
+class CreateAddresses < ActiveRecord::Migration[6.1]
   def change
-    create_table :adddresses do |t|
+    create_table :addresses do |t|
       t.integer :user_id
       t.string :address_type
       t.string :contact_name, :cellphone, :address, :zipcode
@@ -8,6 +8,6 @@ class CreateAdddresses < ActiveRecord::Migration[6.1]
       t.timestamps
     end
 
-    add_index :adddresses, [:user_id, :address_type]
+    add_index :addresses, [:user_id, :address_type]
   end
 end

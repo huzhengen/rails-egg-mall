@@ -4,6 +4,13 @@ class ApplicationController < ActionController::Base
 
   protected
 
+  def auth_user
+    unless logged_in?
+      flash[:notice] = '请登录'
+      redirect_to new_session_path
+    end
+  end
+
   def fetch_home_data
     @categories = Category.group_data
     @shopping_cart_count = ShoppingCart.by_user_uuid(session[:user_uuid]).count
