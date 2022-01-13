@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   delete '/logout' => 'sessions#destroy', as: :logout
   resources :categories, only: [:show]
   resources :products, only: [:show]
+  resources :shopping_carts
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

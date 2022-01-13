@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
 
   def fetch_home_data
     @categories = Category.group_data
+    @shopping_cart_count = ShoppingCart.by_user_uuid(session[:user_uuid]).count
   end
 
   def set_browser_uuid
