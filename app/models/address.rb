@@ -30,7 +30,7 @@ class Address < ApplicationRecord
   end
 
   def remove_self_as_default_address
-    if self.user.set_as_default_address == self
+    if self.user.default_address == self
       self.user.default_address = nil
       self.user.save!
     end
