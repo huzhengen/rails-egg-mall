@@ -75,3 +75,8 @@ bin/rails g model address
 ```
 bin/rails g migration add_user_default_address_id
 ```
+
+订单
+```
+bin/rails g model order
+```
