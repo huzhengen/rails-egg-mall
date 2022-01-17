@@ -86,3 +86,11 @@ bin/rails g model order
 bin/rails g model payment
 bin/rails g migration add_order_payment_id_column
 ```
+
+个人中心 Controller
+```
+bin/rails g controller dashboard::base
+bin/rails g controller dashboard::orders index
+bin/rails g controller dashboard::addresses index
+bin/rails g controller dashboard::profile password
+```
