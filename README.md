@@ -94,3 +94,9 @@ bin/rails g controller dashboard::orders index
 bin/rails g controller dashboard::addresses index
 bin/rails g controller dashboard::profile password
 ```
+
+手机号注册登录
+```
+bin/rails g migration add_users_cellphone
+bin/rails g model verify_token
+```
