@@ -10,7 +10,7 @@ class Order < ApplicationRecord
   belongs_to :user
   belongs_to :product
   belongs_to :address
-  belongs_to :payment
+  belongs_to :payment, optional: true
 
   before_create :generate_order_no
 
@@ -33,7 +33,6 @@ class Order < ApplicationRecord
 
       shopping_carts.each do |shopping_cart|
         orders << user.orders.create!(
-          payment_id: 1,
           product: shopping_cart.product,
           address: order_address,
           amount: shopping_cart.amount,
