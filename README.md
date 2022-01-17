@@ -80,3 +80,9 @@ bin/rails g migration add_user_default_address_id
 ```
 bin/rails g model order
 ```
+
+支付
+```
+bin/rails g model payment
+bin/rails g migration add_order_payment_id_column
+```

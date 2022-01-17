@@ -20,6 +20,10 @@ Rails.application.routes.draw do
     end
   end
   resources :orders
-  resources :payments, only: [:index]
+  resources :payments, only: [:index] do
+    collection do
+      get :generate_pay
+    end
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
