@@ -19,7 +19,7 @@ class Order < ApplicationRecord
     Paid = 'paid'
   end
 
-  def is_paid
+  def is_paid?
     self.status == OrderStatus::Paid
   end
 
@@ -33,6 +33,7 @@ class Order < ApplicationRecord
 
       shopping_carts.each do |shopping_cart|
         orders << user.orders.create!(
+          payment_id: 1,
           product: shopping_cart.product,
           address: order_address,
           amount: shopping_cart.amount,

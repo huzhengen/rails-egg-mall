@@ -12,6 +12,7 @@ class OrdersController < ApplicationController
     shopping_carts = ShoppingCart.by_user_uuid(current_user.uuid).includes(:product)
     if shopping_carts.blank?
       redirect_to shopping_carts_path
+      return
     end
 
     address = current_user.addresses.find(params[:address_id])

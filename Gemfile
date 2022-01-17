@@ -27,8 +27,9 @@ gem 'ancestry'
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 gem 'jquery-rails'
-gem 'sorcery'
 gem 'paperclip', '~> 5.0.0'
+gem 'rest-client'
+gem 'sorcery'
 gem 'will_paginate'
 
 # Use Active Storage variant
