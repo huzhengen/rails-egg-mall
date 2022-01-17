@@ -7,7 +7,21 @@ Rails.application.routes.draw do
       resources :product_images, only: [:index, :create, :destroy, :update]
     end
   end
+
+  namespace :dashboard do
+    scope 'profile' do
+      controller :profile do
+        get :password
+        put :update_password
+      end
+    end
+
+    resources :orders, only: [:index]
+    resources :addresses, only: [:index]
+  end
+
   root 'welcome#index'
+
   resources :users
   resources :sessions
   delete '/logout' => 'sessions#destroy', as: :logout
