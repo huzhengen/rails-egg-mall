@@ -101,3 +101,8 @@ bin/rails g migration add_users_cellphone
 bin/rails g model verify_token
 bin/rails g controller cellphone_tokens
 ```
+
+管理员
+```
+bin/rails g migration add_users_is_admin_column
+```
