@@ -20,6 +20,8 @@ Rails.application.routes.draw do
     resources :addresses, only: [:index]
   end
 
+  resources :cellphone_tokens, only: [:create]
+
   root 'welcome#index'
 
   resources :users

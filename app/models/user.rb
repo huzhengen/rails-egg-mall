@@ -24,12 +24,13 @@ class User < ApplicationRecord
   validate :validate_email_or_cellphone, on: :create
 
   has_many :addresses, -> { where(address_type: Address::AddressType::User).order("id desc") }
-  belongs_to :default_address, class_name: :Address
+  belongs_to :default_address, class_name: :Address, optional: true
+
   has_many :orders
   has_many :payments
 
   def username
-    self.email.split('@').first
+    self.email.blank? ? self.cellphone : self.email.split('@').first
   end
 
   private

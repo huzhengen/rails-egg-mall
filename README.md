@@ -99,4 +99,5 @@ bin/rails g controller dashboard::profile password
 ```
 bin/rails g migration add_users_cellphone
 bin/rails g model verify_token
+bin/rails g controller cellphone_tokens
 ```
